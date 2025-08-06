@@ -12,3 +12,7 @@ This is a fullstack task management app using:
 cd client
 npm install
 ng serve
+
+### Backend:
+cd server
+dotnet run
