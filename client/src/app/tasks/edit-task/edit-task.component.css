@@ -1,0 +1,96 @@
+form {
+    width: 100%;
+}
+
+form input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid grey
+}
+
+form p label {
+    margin-bottom: 5px;
+}
+
+form p input, textarea, select {
+    margin-bottom: 10px;
+}
+
+form .task-selections select {
+    padding: 8px 80px 8px 8px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+form .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+form .task-header button {
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form .task-header h1 {
+    font-weight: 500;
+}
+
+form .task-infos p {
+    display: flex;
+    flex-direction: column;
+}
+
+form .task-selections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+form .task-due-date label {
+    margin-bottom: 5px;
+}
+
+form .task-due-date input {
+    margin-bottom: 15px;
+}
+
+form .task-selections .status label, 
+form .task-selections .priority label {
+    margin-bottom: 5px;
+}
+
+form .task-selections .status,
+form .task-selections .priority {
+    display: flex;
+    flex-direction: column;
+}
+
+form .task-due-date {
+    display: flex;
+    flex-direction: column;
+}
+
+form .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+form .btn button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+form .btn .create-btn {
+    background-color: #202D48;
+    color: #fff;
+}
+

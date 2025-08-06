@@ -1,0 +1,69 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="task-header">
+        <h1>{{ isCreate() ? 'Create' : 'Edit'}}</h1>
+        <button type="button" (click)="onCloseModal()">
+            <span class="material-icons" style="color: black;">
+                close
+            </span>
+        </button>
+    </div>
+    <div class="task-infos">
+        <p>
+            <label for="task-name">Title</label>
+            <input
+                type="text"
+                name="task-name"
+                id="task-name"
+                formControlName="taskName"
+            />
+        </p>
+        @if(hasError('taskName', 'required')) {
+            <app-error-message>Task name is required.</app-error-message>
+        } 
+        <p>
+            <label for="task-description">Description</label>
+            <textarea
+                type="text"
+                name="description"
+                id="description"
+                formControlName="taskDescription"
+            ></textarea>
+        </p>
+        @if(hasError('taskDescription', 'required')) {
+            <app-error-message>Task name is required.</app-error-message>
+        } 
+    </div>
+    <div class="task-selections">
+        <div class="status">
+            <label for="task-status">Status</label>
+            <select formControlName="taskStatus">
+                @for(status of statuses(); track status) {
+                    <option [value]="status">
+                        {{ status === "InProgress" ? "In Progress" : status }}
+                    </option>
+                }
+            </select>
+        </div>
+        <div class="priority">
+            <label for="task-priority">Priority</label>
+            <select formControlName="taskPriority">
+                @for(priority of priorities(); track priority) {
+                    <option [value]="priority">{{ priority }}</option>
+                }
+            </select>
+        </div>
+    </div>
+    <div class="task-due-date">
+        <label for="due-date">Due Date</label>
+        <input 
+            type="date" 
+            name="due-date" 
+            id="due-date"
+            formControlName="dueDate"
+        />
+    </div>
+    <div class="btn">
+        <button type="button" (click)="onCloseModal()" class="cancel-btn">Cancel</button>
+        <button class="create-btn" type="submit">{{ isCreate() ? 'Create' : 'Update'}}</button>
+    </div>
+</form>

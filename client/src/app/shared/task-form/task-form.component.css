@@ -1,0 +1,99 @@
+:host {
+    padding: 40px;
+}
+
+:host form {
+    width: 100%;
+}
+
+:host form input, textarea {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid grey
+}
+
+:host form p label {
+    margin-bottom: 5px;
+}
+
+:host form p input, textarea, select {
+    margin-bottom: 10px;
+}
+
+:host form .task-selections select {
+    padding: 8px 80px 8px 8px;
+    border-radius: 8px;
+    border: 1px solid grey;
+}
+
+:host form .task-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+:host form .task-header button {
+    border: none;
+    background-color: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+:host form .task-header h1 {
+    font-weight: 500;
+}
+
+:host form .task-infos p {
+    display: flex;
+    flex-direction: column;
+}
+
+:host form .task-selections {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+ 
+:host form.task-due-date label {
+    margin-bottom: 5px;
+}
+
+:host form .task-due-date input {
+    margin-bottom: 15px;
+}
+
+:host form .task-selections .status label, 
+.task-selections .priority label{
+    margin-bottom: 5px;
+}
+
+:host form .task-selections .status,
+.task-selections .priority {
+    display: flex;
+    flex-direction: column;
+}
+
+:host form .task-due-date {
+    display: flex;
+    flex-direction: column;
+}
+
+:host form .btn {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 10px;
+}
+
+:host form .btn button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+}
+
+:host form .btn .create-btn {
+    background-color: #202D48;
+    color: #fff;
+}

@@ -1,0 +1,54 @@
+<app-card [task]="task()">
+    <div class="task-wrapper">
+        <div class="task-details-top">
+            <div>
+                <h1>{{ task().taskName }}</h1>
+            </div>
+            <div>
+                <div class="selections">
+                    <button (click)="onDelete(task().taskId)">
+                        <span class="material-icons">
+                            delete
+                        </span>
+                    </button>
+                    <button (click)="openEditTaskDialog()">
+                        <span class="material-icons">
+                            edit
+                        </span>
+                    </button>
+                    <select [ngClass]="getStatusColor()" (change)="onStatusChange(task().taskId, $event)">
+                        @for(status of statuses; track status) {
+                            <option [value]="status" [selected]="status === task().taskStatus">
+                                {{ status === 'InProgress' ? 'In Progress' : status }}
+                            </option>
+                        }
+                    </select>
+                </div>
+            </div>
+        </div>
+        <p class="task-description">{{ task().taskDescription}}</p>
+        <div class="task-details-row">
+            <div class="task-dates">
+                <p>
+                    <span class="material-icons">calendar_today</span>
+                    Created: {{ task().createdAt }}
+                </p>
+                @if(task().dueDate !== null) {
+                    <p>
+                        <span class="material-icons">schedule</span>
+                        Due: {{ task().dueDate }}
+                    </p>
+                }
+            </div>
+            <div class="task-statuses">
+                <div class="pulsing-dot" [ngClass]="getPriorityColor()"></div>
+                <p class="task-priority">
+                    {{ task().taskPriority }} Priority
+                </p>
+                <p class="task-time-left" [ngClass]="getDueDateClass()">
+                    {{ task().timeLeft }} 
+                </p>
+            </div>
+        </div>
+    </div>
+</app-card>

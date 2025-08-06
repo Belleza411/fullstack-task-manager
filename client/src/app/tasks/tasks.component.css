@@ -1,0 +1,54 @@
+:host {
+    width: 100%;
+    height: 100%;
+}
+
+:host .tasks-wrapper {
+    padding: 20px 0 0 0;
+    min-width: 800px;
+}
+
+:host .tasks-wrapper .tasks-top-header {
+    margin-left: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:host .tasks-wrapper .tasks-top-header h1 {
+    font-size: 2.3rem;
+    font-weight: 500;
+}
+
+:host .tasks-wrapper .tasks-top-header div {
+    margin-right: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+:host .tasks-wrapper div button {
+    border: none;
+    background-color: #202D48;
+    color: #fff;
+    border-radius: 4px;
+    padding: 9px 20px;
+}
+
+:host .tasks-wrapper section {
+    background-color: #F2F6FF;
+    margin-top: 30px;
+}
+
+:host .tasks-wrapper section .no-tasks {
+    padding-top: 30px;
+    text-align: center;
+}
+
+:host .tasks-wrapper section ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 60px;
+    padding: 30px 0;
+}

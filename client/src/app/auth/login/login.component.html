@@ -1,0 +1,44 @@
+<section>
+    <app-auth-form
+        authType="login"
+        title="Log in"
+        description="Welcome back! Please enter your credentials to access your to-do list and stay organized."
+        buttonText="Sign in"
+        link="/auth/register"
+        linkText="Don't have an account?"
+        linkAText="Sign Up"
+    >
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <p>
+                <label for="username">Username</label>
+                <input 
+                    type="text" 
+                    id="username" 
+                    name="username" 
+                    formControlName="username"
+                />
+            </p>
+            @if(hasError('username', 'required')) {
+                <app-error-message>Email is required</app-error-message>
+            } @else if (hasError('username', 'email')) {
+                <app-error-message>Please enter a valid email address</app-error-message>
+            }
+            <p>
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    formControlName="password"
+                />
+            </p>
+            @if(hasError('password', 'required')) {
+                <app-error-message>Password is required.</app-error-message>
+            } @else if (hasError('password', 'minLength')) {
+                <app-error-message>Password must be at least 8 characters.</app-error-message>
+            }
+            <button type="submit">Sign In</button>
+        </form>
+    </app-auth-form>
+    <div class="right-wrapper"></div>
+</section>

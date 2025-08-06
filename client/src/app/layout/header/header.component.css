@@ -1,0 +1,21 @@
+header {
+    background-color: #202D48;
+    width: 100%;
+    color: #ffff;
+    padding: 15px 0 15px 30px;
+    min-width: 800px;
+}
+
+header div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header div button {
+    font-size: 1rem;
+    color: #fff;
+    border: none;
+    background-color: inherit;
+    margin-right: 30px;
+}

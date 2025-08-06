@@ -1,0 +1,61 @@
+:host {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #202D48;
+}
+
+:host .right-wrapper {
+    flex: 1;
+}
+
+:host form {
+    display: flex;
+    flex-direction: column;
+}
+
+:host form p {
+    display: flex;
+    flex-direction: column;
+}
+
+:host form p label {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+    color: #000;
+    margin-top: 40px;
+}
+
+:host form p input {
+    padding: 12px 0 12px 15px;
+    border-radius: 8px;
+    border: 1px solid #d9d9d9;
+}
+
+:host form input.ng-pristine.ng-invalid.ng-touched,
+:host form input.ng-invalid.ng-touched.ng-dirty{
+    border: 1px solid red;
+}
+
+:host form button {
+    border: none;
+    border-radius: 6px;
+    background-color: #202D48;
+    color: #fff;
+    padding: 12px 0;
+    margin-top: 40px;
+}
+
+:host .link-wrapper {
+    text-align: center;
+}
+
+:host .link-wrapper .no-account {
+    margin-top: 20px;
+    color: #000;
+}
+
+:host .link-wrapper .no-account a {
+    text-decoration: underline;
+    color: #000;
+}

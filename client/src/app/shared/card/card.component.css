@@ -1,0 +1,33 @@
+div {
+    border: none;
+    border-radius: 28px;
+    background-color: #fff;
+    padding: 25px 25px 25px 30px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.241);
+    position: relative;
+}
+
+.status-indicator {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    border-top-left-radius: 28px;
+    border-bottom-left-radius: 28px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    
+}
+
+.status-indicator.completed {
+    background-color: #00E549;
+}
+
+.status-indicator.pending {
+    background-color: #FACC15;
+}
+
+.status-indicator.in-progress {
+    background-color: #3B82F6;
+}

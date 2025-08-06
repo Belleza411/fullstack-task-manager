@@ -1,0 +1,19 @@
+<div class="left-wrapper">
+    <header>
+        <p>
+            Taskly
+        </p>
+    </header>
+    <div class="form-wrapper">
+        <h1>{{ title() }}</h1>
+        <p>{{ description() }}</p>
+
+        <ng-content />
+        
+        <div class="link-wrapper">
+            <p class="no-account">
+                {{ linkText() }} <a [routerLink]="link()">{{linkAText()}}</a>
+            </p>
+        </div>
+    </div> 
+</div>

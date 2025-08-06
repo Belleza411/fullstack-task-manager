@@ -1,0 +1,58 @@
+<section>
+    <app-auth-form
+        authType="sign-up"
+        title="Sign Up"
+        description="Welcome to Taskly — your personal productivity space. Sign in to manage your tasks and get things done effortlessly."
+        buttonText="Sign Up"
+        link="/auth/login"
+        linkText="Already have an account?"
+        linkAText="Sign In"
+    >
+        <form [formGroup]="form" (ngSubmit)="onSubmit()">
+            <p>
+                <label for="email">Email</label>
+                <input 
+                    type="text" 
+                    id="email" 
+                    name="email" 
+                    formControlName="username"
+                />
+            </p>
+            @if(hasError('username', 'required')) {
+                <app-error-message>Email is required.</app-error-message>
+            } @else if (hasError('username', 'email')) {
+                <app-error-message>Please enter a valid email address</app-error-message>
+            }
+            <p>
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    name="password" 
+                    formControlName="password"
+                />
+            </p>
+            @if(hasError('password', 'required')) {
+                <app-error-message>Password is required.</app-error-message>
+            } @else if (hasError('password', 'minLength')) {
+                <app-error-message>Password must be at least 8 characters.</app-error-message>
+            }
+            <p>
+                <label for="confirm-password">Confirm Password</label>
+                <input 
+                    type="password" 
+                    id="confirm-password" 
+                    name="confirm-password" 
+                    formControlName="confirmPassword"
+                />
+            </p>
+            @if(isPasswordsEqual) {
+                <app-error-message>Passwords does not match.</app-error-message>
+            } @else if (hasError('confirmPassword', 'required')) {
+                <app-error-message>Confirm Password is required.</app-error-message>
+            }
+            <button type="submit"> Sign Up</button>
+        </form>
+    </app-auth-form>
+    <div class="right-wrapper"></div>
+</section>

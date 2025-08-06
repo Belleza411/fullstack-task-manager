@@ -1,0 +1,48 @@
+.left-wrapper {
+    flex: 1;
+    background-color: #fff;
+    height: 100%;
+}
+
+.left-wrapper header {
+    padding: 20px 0 20px 30px;
+}
+
+.left-wrapper header p {
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.left-wrapper .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 50px 100px 0 100px;
+    min-width: 500px;
+}
+
+.left-wrapper .form-wrapper h1 {
+    font-size: 1.7rem;
+    font-weight: 500;
+    margin-bottom: 8px;
+}
+
+.left-wrapper .form-wrapper p {
+    font-size: 0.875rem;
+    color: #757575;
+    max-width: 38rem;
+}
+
+.left-wrapper .link-wrapper {
+    text-align: center;
+}
+
+.left-wrapper .link-wrapper .no-account {
+    margin-top: 20px;
+    color: #000;
+}
+
+.left-wrapper .link-wrapper .no-account a {
+    text-decoration: underline;
+    color: #000;
+}
